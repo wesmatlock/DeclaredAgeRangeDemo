@@ -1,0 +1,46 @@
+name: DeclaredAgeRangeDemo
+options:
+  bundleIdPrefix: com.example
+  deploymentTarget:
+    iOS: "26.0"
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    CODE_SIGN_STYLE: Automatic
+    SWIFT_DEFAULT_ACTOR_ISOLATION: MainActor
+    SWIFT_UPCOMING_FEATURE_NONISOLATED_NONSENDING_BY_DEFAULT: YES
+targets:
+  Crate:
+    type: application
+    platform: iOS
+    sources: [Crate]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.DeclaredAgeRangeDemo
+        CODE_SIGN_ENTITLEMENTS: Crate/Crate.entitlements
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_CFBundleDisplayName: Age Crate
+        ENABLE_TESTABILITY: YES
+  CrateTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: [CrateTests]
+    dependencies:
+      - target: Crate
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        BUNDLE_LOADER: $(TEST_HOST)
+        TEST_HOST: $(BUILT_PRODUCTS_DIR)/Crate.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Crate
+schemes:
+  Crate:
+    build:
+      targets:
+        Crate: all
+        CrateTests: [test]
+    test:
+      targets: [CrateTests]
+    run:
+      commandLineArguments:
+        "-probe": false
