@@ -35,7 +35,7 @@
 		6F6E69C90D5DCBBA8330E5C0 /* Probe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Probe.swift; sourceTree = "<group>"; };
 		739F969C5CF7AFB95B943954 /* AgePolicyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgePolicyTests.swift; sourceTree = "<group>"; };
 		740F69E4E64EF4588168C2AA /* AgePolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgePolicy.swift; sourceTree = "<group>"; };
-		B4B4C26A1440A804346CD1F5 /* Crate.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Crate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4B4C26A1440A804346CD1F5 /* Crate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E65C4C6F9E3A21A0B7B9E6A8 /* CrateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrateApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -336,6 +336,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Crate/Crate.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = PVKFJ5KXUY;
 				ENABLE_TESTABILITY = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Age Crate";
@@ -344,7 +345,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.DeclaredAgeRangeDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = net.insoc.DeclaredAgeRangeDemo;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -373,6 +374,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Crate/Crate.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = PVKFJ5KXUY;
 				ENABLE_TESTABILITY = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Age Crate";
@@ -381,7 +383,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.DeclaredAgeRangeDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = net.insoc.DeclaredAgeRangeDemo;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

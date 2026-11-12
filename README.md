@@ -18,6 +18,13 @@ It age-gates a record-collection app with Apple's Declared Age Range API instead
 4. Run the app. The Collection tab shows the current policy and which features it allows. The Market tab is gated to adults.
 5. Between scenarios, tap Clear Stored Policy and relaunch.
 
+Before and after sharing an 18+ self-declared range from the sandbox:
+
+<p>
+  <img src="Screenshots/before-sharing.png" alt="Status screen before sharing: state Not asked, community notes, seller messages, and marketplace locked" width="300">
+  <img src="Screenshots/after-sharing.png" alt="Status screen after sharing: state 18+ · self-declared, with every feature allowed" width="300">
+</p>
+
 To print the raw API results to the console, enable the `-probe` launch argument in the scheme.
 
 ## What's in it

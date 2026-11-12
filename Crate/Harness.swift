@@ -7,7 +7,7 @@ struct CollectionView: View {
         NavigationStack {
             List {
                 Section("Policy") {
-                    LabeledContent("State", value: String(describing: ageGate.policy))
+                    LabeledContent("State", value: ageGate.policy.statusText)
                     LabeledContent("Must ask at launch", value: ageGate.mustAsk ? "yes" : "no")
                     LabeledContent("Asking", value: ageGate.isAsking ? "yes" : "no")
                 }
@@ -38,4 +38,40 @@ struct MarketplaceView: View {
 
 extension GatedFeature: Hashable {
     static let allForHarness: [GatedFeature] = [.collection, .communityNotes, .sellerMessages, .marketplace]
+}
+
+extension AgePolicy {
+    var statusText: String {
+        switch self {
+        case .notAsked: "Not asked"
+        case .declined: "Declined"
+        case .unavailable: "Unavailable"
+        case let .known(signal):
+            [signal.tier.statusText, signal.source.statusText, signal.communicationLimited ? "communication limits" : nil]
+                .compactMap { $0 }
+                .joined(separator: " · ")
+        }
+    }
+}
+
+extension AgeTier {
+    var statusText: String {
+        switch self {
+        case .under13: "Under 13"
+        case .from13To15: "13–15"
+        case .from16To17: "16–17"
+        case .adult: "18+"
+        }
+    }
+}
+
+extension DeclarationSource {
+    var statusText: String {
+        switch self {
+        case .selfDeclared: "self-declared"
+        case .guardianDeclared: "guardian-declared"
+        case .confirmed: "confirmed"
+        case .unknown: "unknown source"
+        }
+    }
 }
