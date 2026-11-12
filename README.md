@@ -35,5 +35,3 @@ To print the raw API results to the console, enable the `-probe` launch argument
 - `SignificantChanges.swift`: the PermissionKit and StoreKit pieces for significant updates. These need iOS 26.2.
 - `Harness.swift` and `Probe.swift`: the status screen and the `-probe` diagnostics.
 - `CrateTests/AgePolicyTests.swift`: Swift Testing tests for the policy.
-
-The project is generated from `project.yml` with [XcodeGen](https://github.com/yonaskolb/XcodeGen). The generated project is committed, so you don't need XcodeGen to build it.

@@ -345,7 +345,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = net.insoc.DeclaredAgeRangeDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = net.insoc.DeclaredAgeRange;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -383,7 +383,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = net.insoc.DeclaredAgeRangeDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = net.insoc.DeclaredAgeRange;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
